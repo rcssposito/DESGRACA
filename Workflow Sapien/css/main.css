@@ -1,0 +1,106 @@
+body{
+    width:100%;
+    margin:0%;
+    padding: 0%;    
+    background-color: #111;
+}
+
+#main-wrap{
+    display:grid;
+    grid-template-areas: 
+        'text'
+        'login';
+    grid-template-rows: 15% 85%;     
+}
+
+.dots{
+    display: inline-block;
+    margin-left:30px;
+}
+
+.dot1{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+.dot2{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    margin-left: 5px;
+}
+.dot3{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    margin-left: 5px;
+}
+.text{
+    grid-area: text;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    margin-top: 10%;
+}
+
+/* Configuração do formulário */
+
+.login {
+    grid-area: login;
+    width: 270px;
+    margin: 0px auto;    
+    position:relative;
+    display: grid;
+    grid-template-rows: auto;
+    margin-top:5%;
+}
+
+/* Configuração dos fieldsets */
+
+.fields{
+    height:30px;
+    width:250px;
+    padding:10px;
+    margin:10px 0;
+    border:none; /* Remover a borda do input*/
+    border-radius:5px;
+    box-shadow: 0px 2px 4px #000;
+}
+
+.fields:focus{
+    box-shadow: 0 0 5px 5px #888;
+}
+
+
+.reveal{
+    color:#fff;
+}
+
+.label{
+    cursor: pointer;
+}
+/* Configuração do botão de envio e sua alteração com hover */
+
+.send{
+    height:50px;
+    width:270px;
+    margin-top: 15px;
+    font-size:20px;
+    color:#333;
+    border:none;
+    border-radius:5px;
+    background-color:#fff;    
+}
+
+.send:hover{
+    border: 1px solid #fff;
+    color:#fff;
+    transition:0.3s;
+    background-color:#333;
+}
