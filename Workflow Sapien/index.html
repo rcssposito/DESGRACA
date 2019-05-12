@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Workflow Sapien
-        </title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css\main.css">
-        
-    </head>
-    <body>
-        <main id="main-wrap">
-            <div class="text">
-                <div class="dots">
-                    <label class="dot1"></label>
-                    <label class="dot2"></label>
-                    <label class="dot3"></label>
-                </div>
-                <h2>
-                    Sapien
-                </h2>
+
+<head>
+    <title>
+        Workflow Sapien
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+
+</head>
+
+<body>
+    <main id="main-wrap">
+        <div class="text">
+            <div class="dots">
+                <label class="dot1"></label>
+                <label class="dot2"></label>
+                <label class="dot3"></label>
             </div>
-            <form class="login" name="loginform" method="POST" onsubmit="login()">
-                <input id="user" class="fields" type="text" name = "user" placeholder="Usuário" required>
-                <input id="pass" class="fields" type="password" name="pass" placeholder="Senha" required>
-                <span class="reveal">
-                <label class="label" for="exibir"><input id="exibir" type="checkbox" onclick="exibirSenha()">Exibir senha</label> 
-                </span>
-                <input id="submit" class="send" type="submit" value="Login">
-            </form>
-        </main>
-        <script src="js/main.js"></script>
-    </body>
+            <h2>
+                Sapien
+            </h2>
+        </div>
+        <form class="login" name="loginform" method="POST" onsubmit="login()">
+            <input id="user" class="fields" type="text" name="user" placeholder="Usuário" required>
+            <input id="pass" class="fields" type="password" name="pass" placeholder="Senha" required>
+            <span class="reveal">
+                <label class="label" for="exibir"><input id="exibir" type="checkbox" onclick="exibirSenha()">Exibir
+                    senha</label>
+            </span>
+            <input id="submit" class="send" type="submit" value="Login">
+        </form>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

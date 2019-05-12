@@ -1,0 +1,67 @@
+body{
+    background-color: #fff;
+}
+
+a{
+    color: #eee;
+    text-decoration: none;
+}
+
+/* Dev */
+
+.title{
+    vertical-align: middle;
+    text-align: center;
+    color: #333;
+}
+.text{
+    color: #333;
+    text-align: justify;
+    margin-left: 15px;
+}
+/* Full-width input fields */
+.fields2{
+    height:25px;
+    width:30%;
+    padding:10px;
+    margin:10px 10px;
+    border:none; /* Remover a borda do input*/
+    border-radius:5px;
+    box-shadow: 0 1px 2px 0 #333;
+    background-color: transparent;
+}
+
+.xl{
+    width: 91%;
+    height: 120px;
+}
+.md{
+    width: 50%;
+}
+.s{
+    width: 20%;
+}
+
+
+/* Set a style for all buttons */
+button {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 10%;
+}
+/* Extra styles for the submit button */
+.submit{
+    background-color: #4CAF50;
+}
+/* Extra styles for the cancel button */
+.cancel {
+    background-color: #f44336;
+}
+
+button:hover {
+    opacity: 0.8;
+}

@@ -1,15 +1,206 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Workflow Sapien - Administrador
-        </title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css\main.css">
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>
+        Workflow Sapien - Master
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="stylesheet" type="text/css" href="css\dev.css">
+    <link rel="stylesheet" type="text/css" href="css\master.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <main id="alt-wrap">
+
+        <header class="logo">
+
+            <div class="logo">
+                <a href="http://www.sapiendesign.com.br/">
+                    Sapien Design
+                </a>
+            </div>
+        </header>
+
+        <nav class="side-menu">
+            <a href="#">
+                Usuários
+            </a>
+            <a href="#">
+                Projetos
+            </a>
+            <a href="#">
+                OS
+            </a>
+            <a href="index.html">
+                Logout
+            </a>
+        </nav>
+
+        <section class="cards">
+            <!-- Card 1 - Usuário -->
+            <div class="card" onclick="openModal()">
+                <h4 class="title">
+                    Usuário
+                </h4>
+                <div class="usuario"></div>
+            </div>
+            <!-- Card 2 - Projetos -->
+            <div class="card" onclick="openModal2()">
+                <h4 class="title">
+                    Projetos
+                </h4>
+                <div class="cliente"></div>
+            </div>
+            <!-- card 3 - OS -->
+            <div class="card" onclick="openModal3()">
+                <h4 class="title">
+                    OS
+                </h4>
+                <div class="os"></div>
+            </div>
+            <!-- Formulário para cadastro de usuários -->
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span onclick="closeModal()" class="close" title="Close Modal">&times;</span>
+                        <div class="avatar pic-user"></div>
+                    </div>
+
+                    <div class="container">
+
+                        <input class="fields2 s" type="text" placeholder="Código do usuário" name="codigo"
+                            title="Código de usuário"><br>
+
+                        <input class="fields2 md" type="text" placeholder="Nome" name="nome" title="Nome" required><br>
+
+                        <input class="fields2 md" type="email" placeholder="Email" name="email" title="Email"
+                            required><br>
+
+                        <input class="fields2 s" type="text" placeholder="Usuário" name="usuario" required
+                            title="Usuário de acesso ao sistema">
+                        <input class="fields2 s" type="text" placeholder="Senha" name="senha"
+                            title="Senha de acesso ao sistema" required><br>
+
+                        <select class="select s" name="tipo" required>
+                            <option selected disabled label="">
+                            </option>
+                            <option value="adm">
+                                Administrador
+                            </option>
+                            <option value="dev">
+                                Desenvolvedor
+                            </option>
+                        </select>
+
+                        <div class="container2" style="background-color:#f1f1f1">
+                            <button class=".btn submit" type="submit">Criar</button>
+                            <button class=".btn cancel" type="button" onclick="closeModal()"
+                                class="cancelbtn">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Formulário para cadastro de clientes -->
+            <div id="id02" class="modal">
+
+                <form class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span onclick="closeModal2()" class="close" title="Close Modal">&times;</span>
+                        <div class="avatar pic-cliente"></div>
+                    </div>
+
+                    <div class="container">
+
+                        <input class="fields2 s" type="text" placeholder="Código do Cliente" name="codigo"
+                            title="Código do cliente" disabled><br>
+
+                        <input class="fields2 md" type="text" placeholder="Empresa" name="empresa" title="Empresa"
+                            required>
+                        <input class="fields2 s" type="text" placeholder="CNPJ" name="cnpj" title="CNPJ" required><br>
+
+                        <input class="fields2 md" type="text" placeholder="Representante" name="rep"
+                            title="Representante Comercial" required>
+
+                        <input class="fields2 s" type="text" placeholder="Segmento" name="seg" required
+                            title="Segmento de atuação">
+                    </div>
+
+                    <div class="container2" style="background-color:#f1f1f1">
+                        <button class=".btn submit" type="submit">Criar</button>
+                        <button class=".btn cancel" type="button" onclick="closeModal2()"
+                            class="cancelbtn">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Formulário para cadastro de ordens de serviço -->
+            <div id="id03" class="modal">
+
+                <form class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span onclick="closeModal3()" class="close" title="Close Modal">&times;</span>
+                        <div class="avatar pic-os"></div>
+                    </div>
+
+                    <div class="container">
+
+                        <input class="fields2 md" type="text" placeholder="Representante Comercial" name="rep"
+                            title="Representante comercial" required>
+                        <input class="fields2 s" type="text" placeholder="Segmento" name="seg" required
+                            title="Segmento de atuação"><br>
+
+                        <input class="fields2 md" type="text" placeholder="Desenvolvedor" name="dev"
+                            title="Desenvolvedor Responsável" required>
+                        <input class="fields2 s" type="number" placeholder="Alterações realizadas" min="1"
+                            name="alteracoes" required autocomplete="off"
+                            title="Quantidade de alterações realizadas"><br>
+
+                        <input class="fields2 s" type="date" placeholder="Início" name="ini" title="Início do projeto"
+                            required>
+
+                        <input class="fields2 s" type="date" placeholder="Fim" name="fim" title="Fim do projeto"
+                            required><br>
+
+                        <select class="select s" name="situacao" required>
+                            <option selected disabled label="">
+                            </option>
+                            <option value="novo">
+                                Novo
+                            </option>
+                            <option value="desenvolvimento">
+                                Desenvolvimento
+                            </option>
+                            <option value="concluido">
+                                Resolvido
+                            </option>
+                        </select>
+
+                        <select class="select s" name="producao" required>
+                            <option selected disabled label="">
+                            </option>
+                            <option value="alteracao">
+                                Alteracao
+                            </option>
+                            <option value="criacao">
+                                Criacao
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="container2" style="background-color:#f1f1f1">
+                        <button class=".btn submit" type="submit">Criar</button>
+                        <button class=".btn cancel" type="button" onclick="closeModal3()"
+                            class="cancelbtn">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+</body>
+
 </html>

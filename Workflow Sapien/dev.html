@@ -1,21 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Workflow Sapien - Dev
-        </title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css\main.css">
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        <main id="dev-wrap">
-            <nav class="top-menu">
-                <span class="toogle"></span>
-                <span class="logo"></span>
-                <button class="logout" value="Logout"></button>
-            </nav>
-        </main>        
-    </body>
+
+<head>
+    <title>
+        Workflow Sapien - Dev
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="stylesheet" type="text/css" href="css\dev.css">
+    <script src="js/main.js"></script>
+    <script src="js/os.js"></script>
+</head>
+
+<body>
+    <main id="alt-wrap">
+
+        <header class="logo">
+            <div class="logo">
+                <a href="http://www.sapiendesign.com.br/">
+                    Sapien Design
+                </a>
+            </div>
+        </header>
+
+        <nav class="side-menu">
+            <a href="#">
+                Arquivados
+            </a>
+            <a href="index.html">
+                Logout
+            </a>
+        </nav>
+
+        <section class="cards">
+            <!-- card 1 -->
+            <div class="card" onclick="openOS()">
+                <h4 class="title">
+                    Empresa
+                </h4>
+                <p class="text">
+                    Segmento: Sei la
+                </p>
+                <p class="text">
+                    Tipo: Alteração ou Criação
+                </p>
+            </div>
+
+            <div id="id03" class="modal">
+
+                <form class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span onclick="closeOS()" class="close" title="Close Modal">&times;</span>
+                        <div class="avatar pic-os"></div>
+                    </div>
+
+                    <div class="container">
+
+                        <input class="fields2 md" type="text" placeholder="Representante Comercial" name="rep"
+                            title="Representante comercial" required><br>
+
+                        <input class="fields2 md" type="text" placeholder="Desenvolvedor" name="dev"
+                            title="Desenvolvedor Responsável" required>
+                        <input class="fields2 s" type="number" placeholder="Alterações realizadas" min="1"
+                            name="alteracoes" required autocomplete="off"
+                            title="Quantidade de alterações realizadas"><br>
+
+                        <input class="fields2 s" type="date" placeholder="Início" name="ini" title="Início do projeto"
+                            required>
+
+                        <input class="fields2 s" type="date" placeholder="Fim" name="fim" title="Fim do projeto"
+                            required>
+
+                        <select class="select s" name="situacao" required>
+                            <option selected disabled label="">
+                            </option>
+                            <option value="novo">
+                                Novo
+                            </option>
+                            <option value="desenvolvimento">
+                                Desenvolvimento
+                            </option>
+                            <option value="concluido">
+                                Resolvido
+                            </option>
+                        </select>
+
+                        <textarea class="fields2 xl" type="date" placeholder="Descreva as alterações do Projeto"
+                            name="detalhes" required></textarea>
+                    </div>
+
+                    <div class="container2" style="background-color:#f1f1f1">
+                        <button class=".btn submit" type="submit">Enviar</button>
+                        <button class=".btn cancel" type="button" onclick="closeOS()"
+                            class="cancelbtn">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+</body>
+
 </html>

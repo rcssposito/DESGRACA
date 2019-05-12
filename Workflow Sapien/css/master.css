@@ -1,0 +1,33 @@
+.usuario{
+    height: 80px;
+    width: 100px;
+    margin: 0 auto;
+    background-position: center;
+    background-image: url("../img/offspring.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cliente{
+    height: 80px;
+    width: 100px;
+    margin: 0 auto;
+    background-position: center;
+    background-image: url("../img/reaper.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.os{
+    height: 80px;
+    width: 100px;
+    margin: 0 auto;
+    background-position: center;
+    background-image: url("../img/chocobo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.select{
+    margin-left: 10px;
+}
