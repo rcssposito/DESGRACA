@@ -1,3 +1,13 @@
+/* 
+    Camadas do css 
+    Camada 1 - Geral
+    Camada 2 - Telas operacionais (master e dev)
+    Camada 3 - Específico do master
+*/
+
+/* Index */
+
+/* Definição de margem e cor de fundo */
 body {
     width: 100%;
     margin: 0%;
@@ -5,17 +15,20 @@ body {
     background-color: #111;
 }
 
+/* Definição do layout grid para o index */
 #main-wrap {
     display: grid;
     grid-template-areas: 'text' 'login';
     grid-template-rows: 15% 85%;
 }
 
+/* container para os três pontos */
 .dots {
     display: inline-block;
     margin-left: 30px;
 }
 
+/* estilização das labels, cada uma com um tamanho diferente */
 .dot1 {
     display: inline-block;
     background-color: #fff;
@@ -23,7 +36,6 @@ body {
     height: 10px;
     width: 10px;
 }
-
 .dot2 {
     display: inline-block;
     background-color: #fff;
@@ -32,7 +44,6 @@ body {
     width: 11px;
     margin-left: 5px;
 }
-
 .dot3 {
     display: inline-block;
     background-color: #fff;
@@ -42,6 +53,7 @@ body {
     margin-left: 5px;
 }
 
+/* Estilização do logo no index */
 .text {
     grid-area: text;
     text-align: center;
@@ -51,7 +63,6 @@ body {
 }
 
 /* Configuração do formulário */
-
 .login {
     grid-area: login;
     width: 270px;
@@ -63,7 +74,6 @@ body {
 }
 
 /* Configuração dos fieldsets */
-
 .fields {
     height: 30px;
     width: 250px;
@@ -74,11 +84,9 @@ body {
     border-radius: 5px;
     box-shadow: 0 1px 2px 0 #333;
 }
-
 .fields:focus {
     box-shadow: 0 0 5px 5px #888;
 }
-
 .select{
     height: 44px;
     width: 250px;
@@ -89,17 +97,34 @@ body {
     border-radius: 5px;
     box-shadow: 0 1px 2px 0 #333;
 }
-
 .reveal {
     color: #fff;
 }
-
 .label {
     cursor: pointer;
 }
 
-/* Configuração do botão de envio e sua alteração com hover */
-
+/* Estilização dos botões */
+.btn {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 10%;
+  }
+  /* Botão de envio */
+  .submit{
+      background-color: #4CAF50;
+  }
+  /* Botão de cancelamento */
+  .cancel {
+      background-color: #f44336;
+  }  
+  .btn:hover {
+      opacity: 0.8;
+  }
 .send {
     height: 50px;
     width: 270px;
@@ -110,7 +135,6 @@ body {
     border-radius: 5px;
     background-color: #fff;
 }
-
 .send:hover {
     border: 1px solid #fff;
     color: #fff;
@@ -118,8 +142,7 @@ body {
     background-color: #333;
 }
 
-/* Sub */
-
+/* Definição do layout grid para master e dev */
 #alt-wrap {
     display: grid;
     grid-template-areas: 'header header' 'nav content';
@@ -128,6 +151,7 @@ body {
     height: 100vh
 }
 
+/* Estilização do logo */
 .logo {
     grid-area: header;
     display: grid;
@@ -138,13 +162,7 @@ body {
     font-size: 25px;
 }
 
-.container {
-    cursor: pointer;
-    margin: 20px 0 0 50px;
-}
-
 /* Menu */
-
 .side-menu {
     grid-area: nav;
     display: grid;
@@ -152,7 +170,6 @@ body {
     grid-template-rows: 1fr 1fr 1fr 6fr;
     height: 100%;
 }
-
 .side-menu a {
     padding: 50px 5px 5px 32px;
     text-decoration: none;
@@ -161,13 +178,12 @@ body {
     display: grid;
     transition: 0.3s;
 }
-
 .side-menu a:hover {
     box-shadow: 1px 1px 2px #fff;
 }
 
 /* Cards */
-
+/* Container de cards */
 .cards {
     grid-area: content;
     display: grid;
@@ -175,7 +191,7 @@ body {
     justify-items: center;
     color: #111;
 }
-
+/* cards em si */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     transition: 0.3s;
@@ -185,15 +201,12 @@ body {
     background-color: #eee;
     cursor: pointer;
 }
-
 .card:hover {
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Campo oculto para alteração */
-
-/* The Modal (background) */
-
+/* Plano de fundo dos modais */
 .modal {
     display: none;
     /* Hidden by default */
@@ -214,8 +227,7 @@ body {
     padding-top: 60px;
 }
 
-/* Modal Content/Box */
-
+/* Conteudo do Modal */
 .modal-content {
     background-color: #fefefe;
     border-radius: 5px;
@@ -226,14 +238,12 @@ body {
     /* Could be more or less, depending on screen size */
 }
 
-/* Center the image and position the close button */
-
+/* Centralizar a imagem no modal e posicionar o botão de fechar (x) */
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
-
 .avatar {
     height: 120px;
     width: 300px;
@@ -243,38 +253,36 @@ body {
     box-shadow: 0 1px 2px 0 #333;
 }
 
+/* Imagens de Usuário, Cliente e Ordem de Serviço, respectivamente */
+.pic-user{
+    background-image: url("../img/offspring.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pic-cliente{
+    background-image: url("../img/reaper.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .pic-os{
     background-image: url("../img/chocobo.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.pic-user{
-    background-image: url("../img/offspring.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.pic-cliente{
-    background-image: url("../img/reaper.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
+/* Container de botões inferiores */
 .container2 {
     padding: 16px;
     margin: 5px auto;
     width: 87%;
     border-radius: 5px;
 }
-
 span.psw {
     float: right;
     padding-top: 16px;
 }
 
-/* The Close Button (x) */
-
+/* Botão de fechamento (x) */
 .close {
     position: absolute;
     right: 25px;
@@ -283,19 +291,16 @@ span.psw {
     font-size: 35px;
     font-weight: bold;
 }
-
 .close:hover, .close:focus {
     color: red;
     cursor: pointer;
 }
 
-/* Add Zoom Animation */
-
+/* Animação de abertura do modal */
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
 }
-
 @-webkit-keyframes animatezoom {
     from {
         -webkit-transform: scale(0)
@@ -304,7 +309,6 @@ span.psw {
         -webkit-transform: scale(1)
     }
 }
-
 @keyframes animatezoom {
     from {
         transform: scale(0)

@@ -7,6 +7,7 @@
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Utilização de css em camadas, main é a geral, dev é a herança e master a específica -->
     <link rel="stylesheet" type="text/css" href="css\main.css">
     <link rel="stylesheet" type="text/css" href="css\dev.css">
     <link rel="stylesheet" type="text/css" href="css\master.css">
@@ -14,6 +15,7 @@
 </head>
 
 <body>
+    <!-- Aplica o layout do grid para master e dev, e serve como semântica -->
     <main id="alt-wrap">
 
         <header class="logo">
@@ -25,14 +27,16 @@
             </div>
         </header>
 
+        <!-- Menu de navegação lateral, para casos em que o navegador não suporte as tags de grid -->
+        <!-- Foema de retro compatibilidade até que o problema seja identificado e corrigido para o usuário -->
         <nav class="side-menu">
-            <a href="#">
+            <a href="#" onclick="openModal(); return false;">
                 Usuários
             </a>
-            <a href="#">
-                Projetos
+            <a href="#" onclick="openModal2(); return false;">
+                Clientes
             </a>
-            <a href="#">
+            <a href="#" onclick="openModal3(); return false;"></a>
                 OS
             </a>
             <a href="index.html">
@@ -40,6 +44,8 @@
             </a>
         </nav>
 
+        <!-- Seção para os cards para exibir as modais ao usuário -->
+        <!-- Os modais fica, inicialmente, como display:none sendo exibidos apenas quando os cards são clicados -->
         <section class="cards">
             <!-- Card 1 - Usuário -->
             <div class="card" onclick="openModal()">
@@ -66,11 +72,15 @@
             <div id="id01" class="modal">
 
                 <form class="modal-content animate">
+
+                    <!-- Div para exibir o logo da empresa contratante -->
                     <div class="imgcontainer">
+                         <!-- span com o botão em "x" para fechar o modal utilizando a função closeOS() -->
                         <span onclick="closeModal()" class="close" title="Close Modal">&times;</span>
                         <div class="avatar pic-user"></div>
                     </div>
 
+                     <!-- div para armazenamento e posicionamento dos campos do formulário -->
                     <div class="container">
 
                         <input class="fields2 s" type="text" placeholder="Código do usuário" name="codigo"
@@ -108,12 +118,15 @@
             <!-- Formulário para cadastro de clientes -->
             <div id="id02" class="modal">
 
+                <!-- Div para exibir o logo da empresa contratante -->
                 <form class="modal-content animate">
                     <div class="imgcontainer">
+                         <!-- span com o botão em "x" para fechar o modal utilizando a função closeOS() -->
                         <span onclick="closeModal2()" class="close" title="Close Modal">&times;</span>
                         <div class="avatar pic-cliente"></div>
                     </div>
 
+                     <!-- div para armazenamento e posicionamento dos campos do formulário -->
                     <div class="container">
 
                         <input class="fields2 s" type="text" placeholder="Código do Cliente" name="codigo"
@@ -140,21 +153,28 @@
             <!-- Formulário para cadastro de ordens de serviço -->
             <div id="id03" class="modal">
 
+                <!-- Div para exibir o logo da empresa contratante -->
                 <form class="modal-content animate">
+                    <!-- Div para exibir o logo da empresa contratante -->
                     <div class="imgcontainer">
+                         <!-- span com o botão em "x" para fechar o modal utilizando a função closeOS() -->
                         <span onclick="closeModal3()" class="close" title="Close Modal">&times;</span>
+                        <!-- imagem a ser exibida, é puxada no css geral -->
                         <div class="avatar pic-os"></div>
                     </div>
 
+                     <!-- div para armazenamento e posicionamento dos campos do formulário -->
                     <div class="container">
 
                         <input class="fields2 md" type="text" placeholder="Representante Comercial" name="rep"
                             title="Representante comercial" required>
+
                         <input class="fields2 s" type="text" placeholder="Segmento" name="seg" required
                             title="Segmento de atuação"><br>
 
                         <input class="fields2 md" type="text" placeholder="Desenvolvedor" name="dev"
                             title="Desenvolvedor Responsável" required>
+
                         <input class="fields2 s" type="number" placeholder="Alterações realizadas" min="1"
                             name="alteracoes" required autocomplete="off"
                             title="Quantidade de alterações realizadas"><br>

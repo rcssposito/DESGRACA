@@ -12,8 +12,11 @@
 </head>
 
 <body>
+    <!-- Div principal, utiliza main por semântica e aplica o layout do grid em todo o documento -->
     <main id="main-wrap">
+        <!-- Seção de Cabeçalho para receber, futuramente, o logotipo da empresa -->
         <div class="text">
+            <!-- !Solicitação do cliente! Os três pontos fazem parte do logo da empresa -->
             <div class="dots">
                 <label class="dot1"></label>
                 <label class="dot2"></label>
@@ -23,16 +26,21 @@
                 Sapien
             </h2>
         </div>
+        <!-- Formulário de login, enviado como post para não exibir os valores na url -->
+        <!-- Função login() realiza a validação e direciona para a apágina correta -->
+        <!-- Atualmente existem apenas duas combinações, "master" para o superusuário e "dev" para os operários -->
         <form class="login" name="loginform" method="POST" onsubmit="login()">
             <input id="user" class="fields" type="text" name="user" placeholder="Usuário" required>
             <input id="pass" class="fields" type="password" name="pass" placeholder="Senha" required>
             <span class="reveal">
+                <!-- exbirSenha() transforma o campo password em text para que seu conteúdo seja visível -->
                 <label class="label" for="exibir"><input id="exibir" type="checkbox" onclick="exibirSenha()">Exibir
                     senha</label>
             </span>
             <input id="submit" class="send" type="submit" value="Login">
         </form>
     </main>
+    <!-- Não existe necessidade de preload nesta página -->
     <script src="js/main.js"></script>
 </body>
 

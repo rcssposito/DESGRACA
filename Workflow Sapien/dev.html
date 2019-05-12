@@ -7,15 +7,17 @@
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Utilização de css em camadas, main é a geral e dev a específica -->
     <link rel="stylesheet" type="text/css" href="css\main.css">
     <link rel="stylesheet" type="text/css" href="css\dev.css">
     <script src="js/main.js"></script>
-    <script src="js/os.js"></script>
 </head>
 
 <body>
+    <!-- Aplica o layout do grid para master e dev, e serve como semântica -->
     <main id="alt-wrap">
 
+        <!-- Barra superior, separado em frações, pode receber o logo e outros itens caso necessário -->
         <header class="logo">
             <div class="logo">
                 <a href="http://www.sapiendesign.com.br/">
@@ -24,18 +26,25 @@
             </div>
         </header>
 
+        <!-- Menu de navegação lateral, para casos em que o navegador não suporte as tags de grid -->
+        <!-- Foema de retro compatibilidade até que o problema seja identificado e corrigido para o usuário -->
         <nav class="side-menu">
-            <a href="#">
+            <!-- função para chamar o formulário de OS, aqui chamado de modal3 -->
+            <a href="#" onclick="openModal3(); return false;">
                 Arquivados
             </a>
+            <!-- botão de logout, retornando para o index -->
             <a href="index.html">
                 Logout
             </a>
         </nav>
 
+        <!-- Seção para os cards com as informações das OS em aberto para o usuário -->
+        <!-- O modal3 fica, inicialmente, como display:none sendo exibido apenas quando o card é clicado-->
         <section class="cards">
             <!-- card 1 -->
-            <div class="card" onclick="openOS()">
+            <!-- Armazenamento e exibição dos textos; função para exibir o modal3 -->
+            <div class="card" onclick="openModal3()">
                 <h4 class="title">
                     Empresa
                 </h4>
@@ -47,27 +56,36 @@
                 </p>
             </div>
 
+            <!-- modal3 -->
             <div id="id03" class="modal">
 
+                <!-- formulário para visualização e edição quando o serviço for concluído -->
                 <form class="modal-content animate">
+                    <!-- Div para exibir o logo da empresa contratante -->
                     <div class="imgcontainer">
-                        <span onclick="closeOS()" class="close" title="Close Modal">&times;</span>
+                        <!-- span com o botão em "x" para fechar o modal utilizando a função closeOS() -->
+                        <span onclick="closeModal3()" class="close" title="Close Modal">&times;</span>
+                        <!-- imagem a ser exibida, é puxada no css geral -->
                         <div class="avatar pic-os"></div>
                     </div>
 
+                    <!-- div para armazenamento e posicionamento dos campos do formulário -->
                     <div class="container">
 
+                        <!-- Apenas os campos de: número de alterações, data de término e descrição 
+                             ficarão liberados para edição -->
                         <input class="fields2 md" type="text" placeholder="Representante Comercial" name="rep"
-                            title="Representante comercial" required><br>
+                            title="Representante comercial" required disabled><br>
 
                         <input class="fields2 md" type="text" placeholder="Desenvolvedor" name="dev"
-                            title="Desenvolvedor Responsável" required>
+                            title="Desenvolvedor Responsável" required disabled>
+
                         <input class="fields2 s" type="number" placeholder="Alterações realizadas" min="1"
                             name="alteracoes" required autocomplete="off"
                             title="Quantidade de alterações realizadas"><br>
 
                         <input class="fields2 s" type="date" placeholder="Início" name="ini" title="Início do projeto"
-                            required>
+                            required disabled>
 
                         <input class="fields2 s" type="date" placeholder="Fim" name="fim" title="Fim do projeto"
                             required>
@@ -90,9 +108,10 @@
                             name="detalhes" required></textarea>
                     </div>
 
+                    <!-- Área para os botões de envio e cancelamento; Botão cancelar carrega a função closeModal3() -->
                     <div class="container2" style="background-color:#f1f1f1">
-                        <button class=".btn submit" type="submit">Enviar</button>
-                        <button class=".btn cancel" type="button" onclick="closeOS()"
+                        <button class="btn submit" type="submit">Enviar</button>
+                        <button class="btn cancel" type="button" onclick="closeModal3()"
                             class="cancelbtn">Cancelar</button>
                     </div>
                 </form>

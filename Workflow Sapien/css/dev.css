@@ -1,14 +1,22 @@
+/* 
+    Camadas do css 
+    Camada 1 - Geral
+    Camada 2 - Telas operacionais (master e dev)
+    Camada 3 - Específico do master
+*/
+
+/* Altera a cor de fundo para as páginas dev e master, camada 2 */
 body{
     background-color: #fff;
 }
 
+/* Estiliza os links */
 a{
     color: #eee;
     text-decoration: none;
 }
 
-/* Dev */
-
+/* Edição dos textos e títulos */
 .title{
     vertical-align: middle;
     text-align: center;
@@ -19,7 +27,8 @@ a{
     text-align: justify;
     margin-left: 15px;
 }
-/* Full-width input fields */
+
+/* Estilização dos inputs para a camada 2 */
 .fields2{
     height:25px;
     width:30%;
@@ -31,6 +40,7 @@ a{
     background-color: transparent;
 }
 
+/* Classes de tamanho: grande, médio e pequeno, respectivamente */
 .xl{
     width: 91%;
     height: 120px;
@@ -40,28 +50,4 @@ a{
 }
 .s{
     width: 20%;
-}
-
-
-/* Set a style for all buttons */
-button {
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 10%;
-}
-/* Extra styles for the submit button */
-.submit{
-    background-color: #4CAF50;
-}
-/* Extra styles for the cancel button */
-.cancel {
-    background-color: #f44336;
-}
-
-button:hover {
-    opacity: 0.8;
 }
